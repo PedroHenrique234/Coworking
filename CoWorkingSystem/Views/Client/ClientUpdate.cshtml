@@ -1,0 +1,20 @@
+﻿@model ClientModel;
+@{
+    ViewData["Title"] = "Client Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Novo cliente!</h1>
+    <form asp-controller="Client" asp-action="ClientUpdate" method="post">
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label for="Name">Nome</label>
+            <input asp-for="Name" type="text" class="form-control" placeholder="">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Alterar</button>
+        <a role="button" class="btn btn-secondary" asp-controller="Client" asp-action="Index">Voltar</a>
+    </form>
+</div>
