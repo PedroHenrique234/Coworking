@@ -24,6 +24,8 @@
                         <td>@item.CreatDate</td>
                         <td>
                             <a role="button" class="btn btn-primary"
+                               asp-controller="Client" asp-action="ClientDetails" asp-route-id="@item.Id">Ver mais</a>
+                            <a role="button" class="btn btn-primary"
                                asp-controller="Client" asp-action="ClientUpdate" asp-route-id="@item.Id">Editar</a>
                             <a role="button" class="btn btn-secondary"
                                asp-controller="Client" asp-action="RemoveConfirm" asp-route-id="@item.Id">Apagar</a>

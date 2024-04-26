@@ -9,5 +9,6 @@ namespace CoWorkingSystem.Data
         {
         }
         public DbSet<ClientModel> Clients { get; set; }
+        public DbSet<UseModel> Uses { get; set; }
     }
 }

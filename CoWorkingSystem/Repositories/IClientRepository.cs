@@ -9,5 +9,7 @@ namespace CoWorkingSystem.Repositories
         public ClientModel FindById(int id);
         public ClientModel ClientUpdate(ClientModel client);
         public bool DeletClient(int id);
+        public UseModel AddUses(UseModel use, int id);
+        public List<UseModel> FindAllUses();
     }
 }

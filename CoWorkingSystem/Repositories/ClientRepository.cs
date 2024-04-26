@@ -1,5 +1,6 @@
 ﻿using CoWorkingSystem.Data;
 using CoWorkingSystem.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace CoWorkingSystem.Repositories
 {
@@ -51,6 +52,24 @@ namespace CoWorkingSystem.Repositories
         public ClientModel FindById(int id)
         {
             return _bankContext.Clients.FirstOrDefault(o => o.Id == id);
+        }
+
+        public UseModel AddUses(UseModel use, int id)
+        {
+            ClientModel client = FindById(use.ClientId);
+
+            use.Client = client;
+            use.TotalUse = use.EndUse - use.StartUse;
+            use.DateUse = DateTime.Now;
+
+            _bankContext.Uses.Add(use);
+            _bankContext.SaveChanges();
+            return use;
+        }
+
+        public List<UseModel> FindAllUses()
+        {
+            return _bankContext.Uses.ToList();
         }
     }
 }

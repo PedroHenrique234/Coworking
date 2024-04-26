@@ -1,0 +1,37 @@
+﻿@model ClientModel;
+@{
+    ViewData["Title"] = "Client Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Painel de uso do cliente</h1>
+    <a role="button" class="btn btn-primary" asp-controller="Client" asp-action="AddUse" asp-route-id="@Model.Id">Novo uso</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Data de uso</th>
+                <th scope="col">Início</th>
+                <th scope="col">Término</th>
+                <th scope="col">Tempo total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.ClientUses != null && Model.ClientUses.Any())
+            {
+                @foreach (UseModel item in Model.ClientUses)
+                {
+
+                    <tr>
+                        <th>@item.DateUse.ToString("dd/MM/yyyy")</th>
+                        <td>@item.StartUse</td>
+                        <td>@item.EndUse</td>
+                        <td>@item.TotalUse</td>
+                    </tr>
+
+                }
+            }
+        </tbody>
+    </table>
+</div>
+<a role="button" class="btn btn-secondary" asp-controller="Client" asp-action="Index">Voltar</a>

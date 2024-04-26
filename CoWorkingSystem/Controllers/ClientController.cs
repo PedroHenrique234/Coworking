@@ -1,4 +1,5 @@
-﻿using CoWorkingSystem.Models;
+﻿using CoWorkingSystem.Data;
+using CoWorkingSystem.Models;
 using CoWorkingSystem.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +17,30 @@ namespace CoWorkingSystem.Controllers
             List<ClientModel> clients = _clientRepository.FindAll();
             return View(clients);
         }
+
+        public IActionResult ClientDetails(int Id)
+        {
+            ClientModel client = _clientRepository.FindById(Id);
+            List<UseModel> uses = _clientRepository.FindAllUses();
+            return View(client);
+        }
+
+        public IActionResult AddUse(int Id)
+        {
+            ClientModel client = _clientRepository.FindById(Id);
+            UseModel use = new UseModel();
+            use.ClientId = Id;
+            return View(use);
+        }
+
+        [HttpPost]
+        public IActionResult AddNewUse(UseModel use, int Id)
+        {
+            _clientRepository.AddUses(use, Id);
+            return RedirectToAction("Index");
+        }
+
+
         public IActionResult AddClient()
         {
             return View();

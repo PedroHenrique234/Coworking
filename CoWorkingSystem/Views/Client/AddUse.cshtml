@@ -1,0 +1,26 @@
+﻿@model UseModel;
+@{
+    ViewData["Title"] = "Client Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Novo cliente!</h1>
+
+    <form asp-controller="Client" asp-action="AddNewUse" method="post">
+
+        <input type="hidden" asp-for="@Model.ClientId" />
+
+        <div class="form-group">
+            <label for="StartUse">Início</label>
+            <input asp-for="StartUse" type="time" class="form-control" >
+        </div>
+
+        <div class="form-group">
+            <label for="EndUse">Término</label>
+            <input asp-for="EndUse" type="time" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Adicionar</button>
+        <a role="button" class="btn btn-secondary" asp-controller="Client" asp-action="Index">Voltar</a>
+    </form>
+</div>
