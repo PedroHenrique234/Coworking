@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\yelow\\OneDrive\\Documentos\\C#\\Asp.Net\\CoWorkingSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6EC43E81-331F-4ABD-BF5A-62F45CF11424}|CoWorkingSystem\\CoWorkingSystem.csproj|c:\\users\\yelow\\onedrive\\documentos\\c#\\asp.net\\coworkingsystem\\coworkingsystem\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EC43E81-331F-4ABD-BF5A-62F45CF11424}|CoWorkingSystem\\CoWorkingSystem.csproj|solutionrelative:coworkingsystem\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "C:\\Users\\yelow\\OneDrive\\Documentos\\C#\\Asp.Net\\CoWorkingSystem\\CoWorkingSystem\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "CoWorkingSystem\\Controllers\\ClientController.cs",
+              "ToolTip": "C:\\Users\\yelow\\OneDrive\\Documentos\\C#\\Asp.Net\\CoWorkingSystem\\CoWorkingSystem\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "CoWorkingSystem\\Controllers\\ClientController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAA3wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T19:50:35.006Z",
+              "EditorCaption": ""
             }
           ]
         }
